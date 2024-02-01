@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
 
 function CreateProjectPage() {
   const [title, setTitle] = useState("");
