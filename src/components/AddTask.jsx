@@ -15,8 +15,11 @@ function AddTask(props) {
   const handleSubmit = (e) => {        //  <== UPDATE THE FUNCTION
     e.preventDefault();
 
-    // We need the project id when creating the new task
-    const { projectId } = props;
+    // To create a new task, we will need to specify the project ID
+    // The API requires the project ID to be a number but we have it as a sting
+    // To convert it to a number, we will use parseInt()
+    const projectId = parseInt(props.projectId);
+
     // Create an object representing the body of the POST request
     const requestBody = { title, description, projectId };
 
